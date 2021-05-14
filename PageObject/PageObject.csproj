@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C79092B2-239F-41B9-9CC4-3D759E0ACC63}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PageObject</RootNamespace>
+    <AssemblyName>PageObject</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44395</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="RazorEngine, Version=3.10.0.0, Culture=neutral, PublicKeyToken=9ee697374c7e744a, processorArchitecture=MSIL">
+      <HintPath>..\packages\RazorEngine.3.10.0\lib\net45\RazorEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PageEditController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PageView.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="css\accordions.css" />
+    <Content Include="css\alerts.css" />
+    <Content Include="css\animate.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\buttons.css" />
+    <Content Include="css\c3\c3.min.css" />
+    <Content Include="css\calendar\fullcalendar.min.css" />
+    <Content Include="css\calendar\fullcalendar.print.min.css" />
+    <Content Include="css\chosen\bootstrap-chosen.css" />
+    <Content Include="css\chosen\chosen-sprite.png" />
+    <Content Include="css\code-editor\ambiance.css" />
+    <Content Include="css\code-editor\codemirror.css" />
+    <Content Include="css\colorpicker\colorpicker.css" />
+    <Content Include="css\cropper\cropper.min.css" />
+    <Content Include="css\data-table\bootstrap-editable.css" />
+    <Content Include="css\data-table\bootstrap-table.css" />
+    <Content Include="css\datapicker\colorpicker.css" />
+    <Content Include="css\datapicker\datepicker3.css" />
+    <Content Include="css\dropzone\dropzone.css" />
+    <Content Include="css\duallistbox\bootstrap-duallistbox.min.css" />
+    <Content Include="css\editor\bootstrap-editable.css" />
+    <Content Include="css\editor\datetimepicker.css" />
+    <Content Include="css\editor\select2.css" />
+    <Content Include="css\editor\x-editor-style.css" />
+    <Content Include="css\educate-custon-icon.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\form.css" />
+    <Content Include="css\form\all-type-forms.css" />
+    <Content Include="css\form\themesaller-forms.css" />
+    <Content Include="css\ionRangeSlider\ion.rangeSlider.css" />
+    <Content Include="css\ionRangeSlider\ion.rangeSlider.skinFlat.css" />
+    <Content Include="css\ionRangeSlider\sprite-skin-flat.png" />
+    <Content Include="css\main.css" />
+    <Content Include="css\meanmenu.min.css" />
+    <Content Include="css\metisMenu\metisMenu-vertical.css" />
+    <Content Include="css\metisMenu\metisMenu.min.css" />
+    <Content Include="css\modals.css" />
+    <Content Include="css\morrisjs\morris.css" />
+    <Content Include="css\normalize.css" />
+    <Content Include="css\notifications\Lobibox.min.css" />
+    <Content Include="css\notifications\notifications.css" />
+    <Content Include="css\owl.carousel.css" />
+    <Content Include="css\owl.theme.css" />
+    <Content Include="css\owl.transitions.css" />
+    <Content Include="css\preloader\preloader-style.css" />
+    <Content Include="css\responsive.css" />
+    <Content Include="css\scrollbar\jquery.mCustomScrollbar.min.css" />
+    <Content Include="css\select2\select2.min.css" />
+    <Content Include="css\summernote\summernote.css" />
+    <Content Include="css\tabs.css" />
+    <Content Include="css\touchspin\jquery.bootstrap-touchspin.min.css" />
+    <Content Include="css\tree-viewer\32px.png" />
+    <Content Include="css\tree-viewer\throbber.gif" />
+    <Content Include="css\tree-viewer\tree-viewer.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\c3-charts\c3-active.js" />
+    <Content Include="js\c3-charts\c3.min.js" />
+    <Content Include="js\c3-charts\d3.min.js" />
+    <Content Include="js\calendar\fullcalendar-active.js" />
+    <Content Include="js\calendar\fullcalendar.min.js" />
+    <Content Include="js\calendar\moment.min.js" />
+    <Content Include="js\card.js" />
+    <Content Include="js\charts\area-chart.js" />
+    <Content Include="js\charts\bar-chart.js" />
+    <Content Include="js\charts\Chart.js" />
+    <Content Include="js\charts\line-chart.js" />
+    <Content Include="js\charts\rounded-chart.js" />
+    <Content Include="js\chart\jquery.peity.min.js" />
+    <Content Include="js\chart\peity-active.js" />
+    <Content Include="js\chosen\chosen-active.js" />
+    <Content Include="js\chosen\chosen.jquery.js" />
+    <Content Include="js\chosen\chosen.jquery.min.js" />
+    <Content Include="js\code-editor\code-editor-active.js" />
+    <Content Include="js\code-editor\code-editor.js" />
+    <Content Include="js\code-editor\codemirror.js" />
+    <Content Include="js\colorpicker\color-picker-active.js" />
+    <Content Include="js\colorpicker\jquery.spectrum.min.js" />
+    <Content Include="js\counterup\counterup-active.js" />
+    <Content Include="js\counterup\jquery.counterup.min.js" />
+    <Content Include="js\counterup\waypoints.min.js" />
+    <Content Include="js\cropper\cropper-actice.js" />
+    <Content Include="js\cropper\cropper.min.js" />
+    <Content Include="js\data-map\d3.min.js" />
+    <Content Include="js\data-map\data-maps-active.js" />
+    <Content Include="js\data-map\datamaps.all.min.js" />
+    <Content Include="js\data-map\topojson.js" />
+    <Content Include="js\data-table\bootstrap-editable.js" />
+    <Content Include="js\data-table\bootstrap-table-editable.js" />
+    <Content Include="js\data-table\bootstrap-table-export.js" />
+    <Content Include="js\data-table\bootstrap-table-resizable.js" />
+    <Content Include="js\data-table\bootstrap-table.js" />
+    <Content Include="js\data-table\colResizable-1.5.source.js" />
+    <Content Include="js\data-table\data-table-active.js" />
+    <Content Include="js\data-table\tableExport.js" />
+    <Content Include="js\datapicker\bootstrap-datepicker.js" />
+    <Content Include="js\datapicker\bootstrap-datepicker.min.js" />
+    <Content Include="js\datapicker\datepicker-active.js" />
+    <Content Include="js\datepicker\datepicker-active.js" />
+    <Content Include="js\datepicker\jquery-ui.min.js" />
+    <Content Include="js\dropzone\dropzone.js" />
+    <Content Include="js\duallistbox\duallistbox.active.js" />
+    <Content Include="js\duallistbox\jquery.bootstrap-duallistbox.js" />
+    <Content Include="js\e-payment.js" />
+    <Content Include="js\editable\bootstrap-datetimepicker.js" />
+    <Content Include="js\editable\bootstrap-editable.js" />
+    <Content Include="js\editable\jquery.mockjax.js" />
+    <Content Include="js\editable\mock-active.js" />
+    <Content Include="js\editable\moment.min.js" />
+    <Content Include="js\editable\select2.js" />
+    <Content Include="js\editable\xediable-active.js" />
+    <Content Include="js\form-validation\form-active.js" />
+    <Content Include="js\form-validation\jquery.form.min.js" />
+    <Content Include="js\form-validation\jquery.validate.min.js" />
+    <Content Include="js\google.maps\google.maps-active.js" />
+    <Content Include="js\icheck\icheck-active.js" />
+    <Content Include="js\icheck\icheck.min.js" />
+    <Content Include="js\input-mask\jasny-bootstrap.min.js" />
+    <Content Include="js\ionRangeSlider\ion.rangeSlider.active.js" />
+    <Content Include="js\ionRangeSlider\ion.rangeSlider.min.js" />
+    <Content Include="js\jquery-price-slider.js" />
+    <Content Include="js\jquery.maskedinput.min.js" />
+    <Content Include="js\jquery.meanmenu.js" />
+    <Content Include="js\jquery.payform.min.js" />
+    <Content Include="js\jquery.scrollUp.min.js" />
+    <Content Include="js\jquery.sticky.js" />
+    <Content Include="js\knob\jquery.knob.js" />
+    <Content Include="js\knob\knob-active.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\masking-active.js" />
+    <Content Include="js\metisMenu\metisMenu-active.js" />
+    <Content Include="js\metisMenu\metisMenu.min.js" />
+    <Content Include="js\morrisjs\home3-active.js" />
+    <Content Include="js\morrisjs\morris-active-pro.js" />
+    <Content Include="js\morrisjs\morris-active.js" />
+    <Content Include="js\morrisjs\morris.js" />
+    <Content Include="js\morrisjs\raphael-min.js" />
+    <Content Include="js\multiple-email\multiple-email-active.js" />
+    <Content Include="js\notifications\Lobibox.js" />
+    <Content Include="js\notifications\notification-active.js" />
+    <Content Include="js\owl.carousel.min.js" />
+    <Content Include="js\password-meter\password-meter-active.js" />
+    <Content Include="js\password-meter\pwstrength-bootstrap.min.js" />
+    <Content Include="js\password-meter\zxcvbn.js" />
+    <Content Include="js\pdf\jquery.media.js" />
+    <Content Include="js\pdf\pdf-active.js" />
+    <Content Include="js\peity\jquery.peity.min.js" />
+    <Content Include="js\peity\peity-active.js" />
+    <Content Include="js\plugins.js" />
+    <Content Include="js\rangle-slider\jquery-ui-1.10.4.custom.min.js" />
+    <Content Include="js\rangle-slider\jquery-ui-touch-punch.min.js" />
+    <Content Include="js\rangle-slider\rangle-active.js" />
+    <Content Include="js\scrollbar\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="js\scrollbar\mCustomScrollbar-active.js" />
+    <Content Include="js\select2\select2-active.js" />
+    <Content Include="js\select2\select2.full.min.js" />
+    <Content Include="js\sparkline\jquery.charts-sparkline.js" />
+    <Content Include="js\sparkline\jquery.sparkline.min.js" />
+    <Content Include="js\sparkline\sparkline-active.js" />
+    <Content Include="js\summernote\summernote-active.js" />
+    <Content Include="js\summernote\summernote.min.js" />
+    <Content Include="js\tab.js" />
+    <Content Include="js\tawk-chat.js" />
+    <Content Include="js\touchspin\jquery.bootstrap-touchspin.min.js" />
+    <Content Include="js\touchspin\touchspin-active.js" />
+    <Content Include="js\tree-line\jstree.active.js" />
+    <Content Include="js\tree-line\jstree.min.js" />
+    <Content Include="js\vendor\jquery-1.12.4.min.js" />
+    <Content Include="js\vendor\modernizr-2.8.3.min.js" />
+    <Content Include="js\vendor\modernizr-custom.js" />
+    <Content Include="js\wizard\jquery.steps.js" />
+    <Content Include="js\wizard\steps-active.js" />
+    <Content Include="js\wow.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="css\bootstrap.min.css.map" />
+    <Content Include="css\metisMenu\metisMenu.min.css.map" />
+    <Content Include="css\summernote\fonts\summernote.eot" />
+    <Content Include="css\summernote\fonts\summernote.ttf" />
+    <Content Include="css\summernote\fonts\summernote.woff" />
+    <Content Include="js\metisMenu\metisMenu.min.js.map" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="style.css" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\PageEdit\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63175</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44395/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
